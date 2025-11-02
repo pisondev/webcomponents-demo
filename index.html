@@ -3,18 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Counter Components Demo</title>
+  <style>
+    body {
+        font-family:sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .counter-container {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+        margin-top:30px;
+    }
+  </style>
 </head>
 
-<body style="font-family:sans-serif; display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:30px;">
-  <!-- Komponen 1 -->
-  <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
-  <!-- Komponen 2 -->
-  <counter-controls id="controls"></counter-controls>
-  <!-- Komponen 3 (combined-counter) -->
-  <combined-counter title="Lorem Ipsum Title" value="99"></combined-counter>
-  <!-- Varian B -->
-  <counter-display-b id="displayB" title="Varian B Counter" value="10"></counter-display-b>
-  <counter-controls-b target="displayB"></counter-controls-b>
+<body>
+  <div class="counter-container">
+    <!-- Komponen 1 -->
+    <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
+    <!-- Komponen 2 -->
+    <counter-controls id="controls"></counter-controls>
+    
+    <hr style="width: 150px;">
+    <!-- Komponen 3 (combined-counter) -->
+    <combined-counter title="Lorem Ipsum Title" value="99"></combined-counter>
+
+    <hr style="width: 150px;">
+    <!-- Varian B -->
+    <counter-display-b id="displayB" title="Varian B Counter" value="10"></counter-display-b>
+    <counter-controls-b target="displayB"></counter-controls-b>
+  </div>
 
   <script src="counter-display.js"></script>
   <script src="counter-controls.js"></script>
