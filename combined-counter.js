@@ -12,9 +12,14 @@ class CombinedCounter extends HTMLElement {
           padding: 1px;
           width: 180px;
           font-family: sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
         }
         counter-display {
           display: block;
+          width: 100%;
         }
       </style>
       <div class="wrapper">
