@@ -9,6 +9,10 @@
         margin: 0;
         padding: 0;
     }
+    page-header {
+        display: block;
+        width: 100%;
+    }
     .counter-container {
         display:flex;
         flex-direction:column;
@@ -20,6 +24,7 @@
 </head>
 
 <body>
+  <page-header></page-header>
   <div class="counter-container">
     <!-- Komponen 1 -->
     <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
@@ -36,6 +41,7 @@
     <counter-controls-b target="displayB"></counter-controls-b>
   </div>
 
+  <script src="header.js"></script>
   <script src="counter-display.js"></script>
   <script src="counter-controls.js"></script>
   <script src="combined-counter.js"></script>
