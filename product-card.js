@@ -82,7 +82,7 @@ class ProductCard extends HTMLElement {
         <div class="controls-wrapper">
           <span>Jumlah:</span>
           <div class="count-group">
-            <counter-display id="display" title="" value="1"></counter-display>
+            <counter-display id="display" title="Your Orders" value="1"></counter-display>
             <counter-controls id="controls"></counter-controls>
           </div>
         </div>
