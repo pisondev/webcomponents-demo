@@ -9,7 +9,7 @@ class ProductCard extends HTMLElement {
   connectedCallback() {
     const title = this.getAttribute('title') || 'Nama Produk';
     this._basePrice = parseInt(this.getAttribute('base-price')) || 0;
-    this._count = parseInt(this.getAttribute('initial-value')) || 1;
+    this._count = parseInt(this.getAttribute('initial-value')) || 0;
 
     this.render();
 
@@ -22,7 +22,7 @@ class ProductCard extends HTMLElement {
 
     controlsElement.addEventListener('count-change', e => {
       let newCount = this.displayElement.count + e.detail.delta;
-      if (newCount < 1) newCount = 1;
+      if (newCount < 0) newCount = 0;
       this.displayElement.count = newCount;
       this.updateTotalPrice();
     });
