@@ -25,12 +25,30 @@ class ProductCard extends HTMLElement {
       if (newCount < 0) newCount = 0;
       this.displayElement.count = newCount;
       this.updateTotalPrice();
+
+      this.dispatchEvent(new CustomEvent('product-change', {
+        bubbles: true,
+        composed: true
+      }));
+
     });
   }
 
   updateTotalPrice() {
     const newTotal = this.displayElement.count * this._basePrice;
     this.totalPriceElement.textContent = newTotal.toLocaleString('id-ID');
+
+    return newTotal;
+  }
+
+  get currentStatus(){
+    const currentCount = this.displayElement ? this.displayElement.count : this._count;
+
+    return {
+        title: this.getAttribute('title'),
+        quantity: currentCount,
+        total: currentCount * this._basePrice
+    };
   }
 
   render() {
@@ -82,7 +100,7 @@ class ProductCard extends HTMLElement {
         <div class="controls-wrapper">
           <span>Jumlah:</span>
           <div class="count-group">
-            <counter-display id="display" title="Your Orders" value="1"></counter-display>
+            <counter-display id="display" title="Your Orders" value="${this._count}"></counter-display>
             <counter-controls id="controls"></counter-controls>
           </div>
         </div>
