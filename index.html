@@ -45,6 +45,13 @@
         margin-top: 5px;
         text-decoration: underline;
     }
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 0 10px;
+    }
   </style>
 </head>
 
@@ -82,31 +89,34 @@
         </div>
     </div>
     <div slot="bottom">
-        <product-card
-            title="French Fries"
-            base-price="18000"
-            initial-value="0"
-        ></product-card>
+        <h2 class="page-title">Hasil Pengembangan Modifikasi</h2>
+        <div class="products">
+             <product-card
+                title="French Fries"
+                base-price="18000"
+                initial-value="0"
+            ></product-card>
+                <product-card
+                title="Churros"
+                base-price="23000"
+                initial-value="0"
+            ></product-card>
             <product-card
-            title="Churros"
-            base-price="23000"
-            initial-value="0"
-        ></product-card>
-        <product-card
-            title="Cheese Stick"
-            base-price="22000"
-            initial-value="0"
-        ></product-card>
-        <product-card
-            title="Potato Wedges"
-            base-price="21000"
-            initial-value="0"
-        ></product-card>
-        <product-card
-            title="Mac n Cheese"
-            base-price="25000"
-            initial-value="0"
-        ></product-card>
+                title="Cheese Stick"
+                base-price="22000"
+                initial-value="0"
+            ></product-card>
+            <product-card
+                title="Potato Wedges"
+                base-price="21000"
+                initial-value="0"
+            ></product-card>
+            <product-card
+                title="Mac n Cheese"
+                base-price="25000"
+                initial-value="0"
+            ></product-card>
+        </div>
     </div>
   </layout-two-column>
 

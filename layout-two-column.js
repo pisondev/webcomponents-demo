@@ -37,9 +37,15 @@ class LayoutTwoColumn extends HTMLElement {
                 }
                 .bottom-section ::slotted(div[slot="bottom"]){
                     display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 20px;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+                .bottom-section ::slotted(div[slot="bottom"]) h2 {
+                    text-align: left;
+                    margin: 0;
+                }
+                .bottom-section ::slotted(div[slot="bottom"]) product-card {
+                    display: inline-block;
                 }
                 @media (max-width: 768px) {
                     .top-section {
