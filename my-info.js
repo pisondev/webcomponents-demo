@@ -31,11 +31,6 @@ class MyInfo extends HTMLElement {
                     margin: 0 0 5px 0;
                     color: #ffffffff;
                 }
-                p {
-                    margin: 0;
-                    color: #ffffffff;
-                    font-weight: bold;
-                }
                 a {
                     color: #ffffffff;
                     text-decoration: none;
@@ -52,11 +47,11 @@ class MyInfo extends HTMLElement {
                 </div>
                 
                 <div class="info-line">
-                    <p>NIM: ${nim}</p>
+                    <h3>NIM: ${nim}</h3>
                 </div>
 
                 <div class="info-line">
-                    <p>Github: ${githubHTML}</p>
+                    <h3>Github: ${githubHTML}</h3>
                 </div>
 
             </div>
