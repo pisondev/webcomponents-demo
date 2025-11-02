@@ -35,6 +35,12 @@ class LayoutTwoColumn extends HTMLElement {
                     border-top: 1px solid #eee;
                     box-sizing: border-box;
                 }
+                .bottom-section ::slotted(div[slot="bottom"]){
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                }
                 @media (max-width: 768px) {
                     .top-section {
                         flex-direction: column;
