@@ -59,6 +59,12 @@ class ProductCard extends HTMLElement {
           align-items: center;
           margin-bottom: 20px;
         }
+        .count-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
         .total-section {
           border-top: 1px solid #eee;
           padding-top: 15px;
@@ -75,7 +81,7 @@ class ProductCard extends HTMLElement {
         
         <div class="controls-wrapper">
           <span>Jumlah:</span>
-          <div>
+          <div class="count-group">
             <counter-display id="display" title="" value="1"></counter-display>
             <counter-controls id="controls"></counter-controls>
           </div>

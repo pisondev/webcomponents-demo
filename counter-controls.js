@@ -8,19 +8,17 @@ class CounterControls extends HTMLElement {
       <style>
         .controls {
           display: flex;
-          border: 1px solid #000;
           width: 120px;
+          gap: 5px;
         }
         button {
           flex: 1;
           background-color: #d3d3d3;
           border: none;
+          border-radius: 5px;
           font-size: 1.2rem;
           cursor: pointer;
           height: 30px;
-        }
-        button:not(:last-child) {
-          border-right: 1px solid #000;
         }
         button:hover {
           background-color: #bdbdbd;

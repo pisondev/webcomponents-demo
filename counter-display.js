@@ -9,9 +9,9 @@ class CounterDisplay extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         .display {
-          background-color: #f8a8a8;
+          background-color: #e5a45eff;
+          border-radius: 10px;
           padding: 12px;
-          border: 1px solid #000;
           font-family: sans-serif;
         }
         .title {
