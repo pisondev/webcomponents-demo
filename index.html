@@ -25,11 +25,22 @@
     }
     .counter-container {
         display:flex;
-        flex-direction:column;
-        align-items:center;
+        flex-direction:row;
+        justify-content: center;
+        align-items:flex-start;
+        flex-wrap: wrap;
         gap:10px;
+        margin-top: 20px;
     }
-
+    .counter-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px 20px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
     .section-title {
         font-size: 1rem;
         color: #555;
@@ -46,25 +57,26 @@
   <main class="main-content">
     <h2 class="page-title">Hasil Mentah Hands-On Modul</h2>
     <div class="counter-container">
-        
-        <h3 class="section-title">Komponen 1 & 2</h3>
-        <!-- Komponen 1 -->
-        <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
-        <!-- Komponen 2 -->
-        <counter-controls id="controls"></counter-controls>
-        
-        <hr style="width: 150px;">
-        
-        <h3 class="section-title">Komponen 3 (combined)</h3>
-        <!-- Komponen 3 (combined-counter) -->
-        <combined-counter title="Lorem Ipsum Title" value="99"></combined-counter>
+        <div class="counter-group">
+            <h3 class="section-title">Komponen 1 & 2</h3>
+            <!-- Komponen 1 -->
+            <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
+            <!-- Komponen 2 -->
+            <counter-controls id="controls"></counter-controls>
+        </div>
 
-        <hr style="width: 150px;">
-        
-        <h3 class="section-title">Komponen Varian B</h3>
-        <!-- Varian B -->
-        <counter-display-b id="displayB" title="Varian B Counter" value="10"></counter-display-b>
-        <counter-controls-b target="displayB"></counter-controls-b>
+        <div class="counter-group">
+            <h3 class="section-title">Komponen 3 (combined)</h3>
+            <!-- Komponen 3 (combined-counter) -->
+            <combined-counter title="Lorem Ipsum Title" value="99"></combined-counter>
+        </div>
+
+        <div class="counter-group">
+            <h3 class="section-title">Komponen Varian B</h3>
+            <!-- Varian B -->
+            <counter-display-b id="displayB" title="Varian B Counter" value="10"></counter-display-b>
+            <counter-controls-b target="displayB"></counter-controls-b>
+        </div>
     </div>
   </main>
 
