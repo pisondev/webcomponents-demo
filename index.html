@@ -13,29 +13,6 @@
         display: block;
         width: 100%;
     }
-    .main-layout {
-        display: flex;
-        flex-direction: column;
-    }
-    .top-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 20px 30px;
-    }
-    .left-side {
-        flex: 1;
-        border-right: 1px solid #eee;
-        min-height: 300px;
-        padding-right: 30px;
-    }
-    .right-side {
-        flex: 1;
-        padding-left: 30px;
-    }
     .page-title {
         font-size: 1.25rem;
         color: #333;
@@ -68,61 +45,49 @@
         margin-top: 5px;
         text-decoration: underline;
     }
-    .bottom-section {
-        width: 100%;
-        padding: 20px 30px;
-        border-top: 1px solid #eee;
-        box-sizing: border-box;
-    }
   </style>
 </head>
 
 <body>
   <page-header></page-header>
+  <layout-two-column>
+    <my-info slot="left"
+        name="Pison Golda Mountera"
+        nim="24/543770/PA/23107"
+        github-link="https://github.com/pisondev"
+    ></my-info>
+    <div slot="right">
+        <h2 class="page-title">Hasil Rapi Hands-On Modul</h2>
+        <div class="counter-container">
+            <div class="counter-group">
+                <h3 class="section-title">Komponen 1 & 2</h3>
+                <!-- Komponen 1 -->
+                <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
+                <!-- Komponen 2 -->
+                <counter-controls id="controls"></counter-controls>
+            </div>
 
-  <div class="main-layout">
-    <section class="top-section">
-        <div class="left-side">
-            <my-info
-                name="Pison Golda Mountera"
-                nim="24/543770/PA/23107"
-                github-link="https://github.com/pisondev"
-            ></my-info>
+            <div class="counter-group">
+                <h3 class="section-title">Komponen 3 (combined)</h3>
+                <!-- Komponen 3 (combined-counter) -->
+                <combined-counter title="Lorem Ipsum Title" value="99"></combined-counter>
+            </div>
+
+            <div class="counter-group">
+                <h3 class="section-title">Komponen Varian B</h3>
+                <!-- Varian B -->
+                <counter-display-b id="displayB" title="Varian B Counter" value="10"></counter-display-b>
+                <counter-controls-b target="displayB"></counter-controls-b>
+            </div>
         </div>
-
-        <div class="right-side">
-                <h2 class="page-title">Hasil Rapi Hands-On Modul</h2>
-                <div class="counter-container">
-                    <div class="counter-group">
-                        <h3 class="section-title">Komponen 1 & 2</h3>
-                        <!-- Komponen 1 -->
-                        <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
-                        <!-- Komponen 2 -->
-                        <counter-controls id="controls"></counter-controls>
-                    </div>
-
-                    <div class="counter-group">
-                        <h3 class="section-title">Komponen 3 (combined)</h3>
-                        <!-- Komponen 3 (combined-counter) -->
-                        <combined-counter title="Lorem Ipsum Title" value="99"></combined-counter>
-                    </div>
-
-                    <div class="counter-group">
-                        <h3 class="section-title">Komponen Varian B</h3>
-                        <!-- Varian B -->
-                        <counter-display-b id="displayB" title="Varian B Counter" value="10"></counter-display-b>
-                        <counter-controls-b target="displayB"></counter-controls-b>
-                    </div>
-                </div>
-        </div>
-    </section>
-
-    <section class="bottom-section">
-
-    </section>
-  </div>
+    </div>
+    <div slot="bottom">
+            
+    </div>
+  </layout-two-column>
 
   <script src="header.js"></script>
+  <script src="layout-two-column.js"></script>
   <script src="my-info.js"></script>
   <script src="counter-display.js"></script>
   <script src="counter-controls.js"></script>
