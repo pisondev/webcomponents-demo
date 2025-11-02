@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter Components Demo</title>
+  <script src="counter-display.js"></script>
+  <script src="counter-controls.js"></script>
+</head>
+
+<body style="font-family:sans-serif; display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:30px;">
+  <!-- Komponen 1 -->
+  <counter-display id="display" title="Lorem Ipsum Title" value="99"></counter-display>
+  <!-- Komponen 2 -->
+  <counter-controls id="controls"></counter-controls>
+
+  <script>
+    const display = document.getElementById('display');
+    const controls = document.getElementById('controls');
+
+    controls.addEventListener('count-change', e => {
+      display.count += e.detail.delta;
+    });
+  </script>
+</body>
+
+</html>
